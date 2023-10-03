@@ -1,0 +1,10 @@
+{
+  "name": "com.mischievous-byte.masquerade-sdk",
+  "displayName": "Masquerade SDK",
+  "version": "1.0.0",
+  "description": "SDK for Masquerade",
+  "author": {
+    "name": "Mischievous Byte"
+  },
+  "type": "library"
+}

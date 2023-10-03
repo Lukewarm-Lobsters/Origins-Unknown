@@ -123,6 +123,540 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &179918803
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 179918804}
+  - component: {fileID: 179918805}
+  m_Layer: 0
+  m_Name: Realtime
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &179918804
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179918803}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1500662763}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &179918805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179918803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bdb42a7931784242884f926ffd3630f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  body: {fileID: 11400000, guid: 9e050a29ef51d7648b887642b806ff69, type: 2}
+--- !u!1 &232529188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 232529189}
+  - component: {fileID: 232529190}
+  m_Layer: 0
+  m_Name: Virtual
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &232529189
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232529188}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1500662763}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &232529190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232529188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aa16bf8db3101740b6b38b765528774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tree:
+    pelvis:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.00000033015945
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0.99791867
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.00000051621345
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    l3:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.000000068638286
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0.09923464
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.012273348
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    t12:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.000011546106
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0.11645436
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.014223411
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    t7:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.000010738714
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0.13360202
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.016264591
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    c7:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.000012865055
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0.15032482
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.007929049
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    head:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.000008988231
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0.103218436
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.031424288
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    eyes:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.00005112915
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0.07524703
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.12640752
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    headTop:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0.204247
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    leftClavicle:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.06105029
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0.09110963
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.007055521
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    leftUpperArm:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.12655027
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: -0.0026642084
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.026009202
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    leftForearm:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.2740468
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.00000048801303
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    leftWrist:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.27614462
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.00000036135316
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    leftHand:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.06384613
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: -0.029703658
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.003708335
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    rightClavicle:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.06106491
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0.09109986
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0070556216
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    rightUpperArm:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.12655051
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: -0.0026552677
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.026008978
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    rightForearm:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.2740468
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: -0.00000011920929
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.00000023841858
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    rightWrist:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.2761446
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: -0.00000023841858
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.00000036880374
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    rightHand:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.06384619
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: -0.029703772
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0037081244
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    leftUpperLeg:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.09124458
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: -0.066563904
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.00055371114
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    leftLowerLeg:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0024468899
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: -0.40595436
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0051478264
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    leftFoot:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0024465993
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: -0.42047888
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.02059954
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    leftToes:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.003735222
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: -0.07208547
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.13966559
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    rightUpperLeg:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.09124448
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: -0.06656402
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.00055384735
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    rightLowerLeg:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0024466515
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: -0.40595442
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0051425314
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    rightFoot:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0024468675
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: -0.42047858
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.020604964
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    rightToes:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0037354976
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: -0.072085455
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.13966557
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  remapper: {fileID: 11400000, guid: aec7cd3c0ab610943a37acdd14b03b83, type: 2}
+  body: {fileID: 11400000, guid: 9e050a29ef51d7648b887642b806ff69, type: 2}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,6 +961,556 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1466212618
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1466212619}
+  - component: {fileID: 1466212620}
+  m_Layer: 0
+  m_Name: Art
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1466212619
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466212618}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1500662763}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1466212620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466212618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a54ed4d91315b4c4bad01fb490234005, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tree:
+    pelvis:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
+    l3:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
+    t12:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
+    t7:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
+    c7:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
+    head:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
+    eyes:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
+    headTop:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
+    leftClavicle:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
+    leftUpperArm:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
+    leftForearm:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
+    leftWrist:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
+    leftHand:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
+    rightClavicle:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
+    rightUpperArm:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
+    rightForearm:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
+    rightWrist:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
+    rightHand:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
+    leftUpperLeg:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
+    leftLowerLeg:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
+    leftFoot:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
+    leftToes:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
+    rightUpperLeg:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
+    rightLowerLeg:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
+    rightFoot:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
+    rightToes:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
+  referenceModule: {fileID: 232529190}
+  hasLegs: 0
+--- !u!1 &1500662762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1500662763}
+  - component: {fileID: 1500662765}
+  - component: {fileID: 1500662764}
+  m_Layer: 0
+  m_Name: Player Rig
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1500662763
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500662762}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 179918804}
+  - {fileID: 232529189}
+  - {fileID: 1466212619}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1500662764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500662762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cf29550dddb1e04da44c4ea7e8b979c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  avatar: {fileID: 8918800949961890757, guid: b6c35be04e41ee84e8412a7be0d45fed, type: 3}
+--- !u!114 &1500662765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500662762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3198ed00786d294c9e3aaca2b23feba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -434,3 +1518,4 @@ SceneRoots:
   - {fileID: 330585546}
   - {fileID: 410087041}
   - {fileID: 832575519}
+  - {fileID: 1500662763}

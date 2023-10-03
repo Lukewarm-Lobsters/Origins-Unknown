@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7e8190f45e275b489aa428f621185f5, type: 3}
+  m_Name: Player Body
+  m_EditorClassIdentifier: 
+  builder: {fileID: 11400000, guid: 2365695d7b86dbd4d9451f99c78c42c4, type: 2}
+  poser: {fileID: 11400000, guid: 53d92203e7fb22c4b8b084d8e07fca85, type: 2}
+  measurements:
+    height: 1.76
+    wingspan: 1.78
+  eyesInput:
+    positionAction: {fileID: 8207209857236123744, guid: 91ab67b7b7351a4468b6d668c4803db0,
+      type: 3}
+    rotationAction: {fileID: 4405708993050428332, guid: 91ab67b7b7351a4468b6d668c4803db0,
+      type: 3}
+  leftHandInput:
+    positionAction: {fileID: 8607273998113091700, guid: 91ab67b7b7351a4468b6d668c4803db0,
+      type: 3}
+    rotationAction: {fileID: -7884268567542936589, guid: 91ab67b7b7351a4468b6d668c4803db0,
+      type: 3}
+  rightHandInput:
+    positionAction: {fileID: -8374556453919587722, guid: 91ab67b7b7351a4468b6d668c4803db0,
+      type: 3}
+    rotationAction: {fileID: -9058747811584019401, guid: 91ab67b7b7351a4468b6d668c4803db0,
+      type: 3}
+  override: 1
+  rotation: 0
+  eyesPose:
+    position: {x: 0, y: 1.64, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+  leftHandPose:
+    position: {x: -0.2, y: 1.4, z: 0.3}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+  rightHandPose:
+    position: {x: 0.2, y: 1.4, z: 0.3}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+  onlyPoseWhenRequired: 1
