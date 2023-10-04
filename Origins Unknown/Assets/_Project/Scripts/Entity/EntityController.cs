@@ -1,11 +1,10 @@
-using LukewarmLobsters.OriginsUnknown.Entity;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-namespace LukewarmLobsters.OriginsUnknown
+namespace LukewarmLobsters.OriginsUnknown.Entity
 {
     public class EntityController : MonoBehaviour, IDamageable, IKilleable
     {
