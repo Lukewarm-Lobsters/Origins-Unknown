@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LukewarmLobsters.OriginsUnknown
+namespace LukewarmLobsters.OriginsUnknown.Entity
 {
     public interface IDamageable
     {
