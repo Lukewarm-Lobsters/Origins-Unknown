@@ -53,7 +53,7 @@ namespace LukewarmLobsters.OriginsUnknown
 
 
             Vector3 localTarget = transform.InverseTransformPoint(target.position);
-            Vector3 localNormal = transform.InverseTransformVector(target.up.normalized);
+            Vector3 localNormal = transform.InverseTransformVector(target.forward.normalized);
 
             float distance = localTarget.magnitude;
 
