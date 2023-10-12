@@ -204,6 +204,9 @@ namespace MischievousByte.Masquerade
             }
 
 
+
+            output[BodyNode.Pelvis] = Matrix4x4.TRS(Vector3.up * output[BodyNode.Pelvis].GetPosition().y, Quaternion.identity, Vector3.one);
+
             return output;
         }
     }

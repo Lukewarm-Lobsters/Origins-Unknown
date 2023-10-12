@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace MischievousByte.Masquerade.Character
 {
+    [AddComponentMenu(Core_PackageInfo.ComponentMenuPrefix + "Avatar Container")]
     public class AvatarContainer : MonoBehaviour, IAvatarContainer
     {
         [SerializeField] private Avatar avatar;

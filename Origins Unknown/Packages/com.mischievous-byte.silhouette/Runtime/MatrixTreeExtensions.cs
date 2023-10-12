@@ -33,18 +33,12 @@ namespace MischievousByte.Silhouette
 
         public static Bounds GetReachBounds(this in BodyTree<Matrix4x4> tree, LeftRight side, Matrix4x4 matrix, float maxShoulderYAngle, float maxShoulderZAngle)
         {
-            BodyTree<Matrix4x4> worldTree = tree.ToWorld();
-
             BodyNode clavicleNode = side == LeftRight.Left ? BodyNode.LeftClavicle : BodyNode.RightClavicle;
             BodyNode upperArmNode = clavicleNode + 1;
             BodyNode forearmNode = upperArmNode + 1;
             BodyNode wristNode = forearmNode + 1;
-            BodyNode handNode = wristNode + 1;
-
 
             float armLength = tree[forearmNode].GetPosition().magnitude + tree[wristNode].GetPosition().magnitude;
-            armLength += tree[handNode].GetPosition().magnitude;
-
 
             Vector3 GetUpperArmPosition(in BodyTree<Matrix4x4> tree, Vector3 direction)
             {

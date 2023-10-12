@@ -8,5 +8,12 @@
   "type": "library",
   "dependencies": {
     "com.unity.inputsystem": "1.0.0"
-  }
+  },
+  "samples": [
+    {
+        "displayName": "Quick Start",
+        "description": "-",
+        "path": "Samples~/Quick Start"
+    }
+  ]
 }

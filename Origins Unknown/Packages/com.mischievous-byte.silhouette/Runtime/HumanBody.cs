@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 
 namespace MischievousByte.Silhouette
 {
-    [CreateAssetMenu]
+    [CreateAssetMenu(menuName = PackageInfo.AssetMenuPrefix + "Human Body")]
     public class HumanBody : ScriptableObject
     {
         [System.Serializable]

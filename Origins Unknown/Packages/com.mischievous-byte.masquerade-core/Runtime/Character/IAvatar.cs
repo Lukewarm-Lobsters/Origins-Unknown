@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using UnityEngine;
-using Avatar = MischievousByte.Masquerade.Avatar;
+using Avatar = MischievousByte.Masquerade.Character.Avatar;
 
 namespace MischievousByte.Masquerade.Character
 {

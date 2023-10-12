@@ -20,6 +20,7 @@ namespace MischievousByte.Masquerade
 
                 tree[node].localPosition = t[node].GetPosition();
                 //Debug.Log($"{node}: {t[node].GetPosition()}, {t[node].rotation.eulerAngles}");
+                
                 tree[node].localRotation = t[node].rotation;
             }
         }

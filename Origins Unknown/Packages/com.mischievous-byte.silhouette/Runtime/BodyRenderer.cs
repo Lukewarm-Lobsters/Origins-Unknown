@@ -6,6 +6,7 @@ using UnityEngine;
 
 namespace MischievousByte.Silhouette
 {
+    [AddComponentMenu(PackageInfo.ComponentMenuPrefix + "Body Renderer")]
     public class BodyRenderer : MonoBehaviour
     {
         public HumanBody body;

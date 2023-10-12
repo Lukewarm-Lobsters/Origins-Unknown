@@ -12,6 +12,7 @@ using UnityEngine.XR;
 
 namespace MischievousByte.Masquerade.Rig
 {
+    [AddComponentMenu(Core_PackageInfo.ComponentMenuPrefix + "Art Module")]
     public class ArtModule : MasqueradeModule
     {
         [SerializeField] private MasqueradeModule referenceModule;
@@ -55,7 +56,7 @@ namespace MischievousByte.Masquerade.Rig
             animator.transform.localPosition = Vector3.zero;
             animator.transform.localRotation = Quaternion.identity;
 
-            destroy(animator.GetComponent<Avatar>());
+            destroy(animator.GetComponent<Character.Avatar>());
 
             UpdateTPose();
 
@@ -155,6 +156,7 @@ namespace MischievousByte.Masquerade.Rig
         {
             BodyTree<Matrix4x4> globalInput = referenceModule.Tree.ToWorld();
 
+            
             foreach (BodyNode node in BodyNodeUtility.All)
             {
                 if (!node.IsHumanoid())
@@ -167,10 +169,12 @@ namespace MischievousByte.Masquerade.Rig
                 if (boneTransform == null)
                     continue;
 
-                boneTransform.position = globalInput[node].GetPosition();
-                Quaternion fixedRotation = globalInput[node].rotation * globalAnimatorMatrices[bone].rotation;
+                Matrix4x4 worldMatrix = referenceModule.transform.localToWorldMatrix * globalInput[node];
+                boneTransform.position = worldMatrix.GetPosition();
 
-                boneTransform.rotation = transform.rotation * fixedRotation;
+                Quaternion fixedRotation = worldMatrix.rotation * globalAnimatorMatrices[bone].rotation;
+
+                boneTransform.rotation = fixedRotation;
             }
         }
 

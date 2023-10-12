@@ -7,11 +7,16 @@ using UnityEngine;
 
 namespace MischievousByte.Masquerade.Rig
 {
+    [AddComponentMenu(Core_PackageInfo.ComponentMenuPrefix + "Skeleton Module")]
     public class SkeletonModule : MasqueradeModule
     {
-        [SerializeField] private BodyRemapper remapper;
         [SerializeField] private HumanBody body;
+        [SerializeField] private BodyRemapper remapper;
+        [SerializeField] private BodyNode center = BodyNode.T12;
 
+        [Space(10)]
+        [SerializeField] private BodyNodeBindings bindings;
+        
         protected override void OnContextChanged(ModularRig.Context context)
         {
             base.OnContextChanged(context);
@@ -31,12 +36,37 @@ namespace MischievousByte.Masquerade.Rig
                 worldHead.rotation, Vector3.one);
 
             tree[BodyNode.HeadTop] = worldHead.inverse * worldTop;
+
+            bindings?.Apply(tree);
         }
+
+        private bool cycledOnce;
+        private Vector3 previousCenterPosition;
+        public Vector3 Velocity { get; private set; }
 
         private void Execute()
         {
             BodyTree<Matrix4x4> input = body.Pose;
+
             remapper.Remap(in input, ref tree, body.measurements.Height, AvatarContainer.Avatar.Height, body.Poser.BodyConstraints);
+
+            var worldTree = tree.ToWorld();
+            Vector3 centerPosition = worldTree[center].GetPosition();
+            
+            if (cycledOnce)
+            {
+                Vector3 delta = Vector3.ProjectOnPlane(centerPosition - previousCenterPosition, Vector3.up);
+                Velocity = delta / Time.deltaTime;
+            }
+
+            tree[BodyNode.Pelvis] = Matrix4x4.TRS(
+                tree[BodyNode.Pelvis].GetPosition() - Vector3.ProjectOnPlane(centerPosition, Vector3.up),
+                tree[BodyNode.Pelvis].rotation,
+                Vector3.one);
+
+            previousCenterPosition = centerPosition;
+            bindings?.Apply(tree);
+            cycledOnce = true;
         }
     }
 }
