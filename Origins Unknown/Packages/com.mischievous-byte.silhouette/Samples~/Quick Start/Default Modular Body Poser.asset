@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8242d6e0251c9a346bb0d1ce9060111a, type: 3}
+  m_Name: Default Modular Body Poser
+  m_EditorClassIdentifier: 
+  bodyConstraints:
+    spineBend: 45
+    maxShoulderYRotation: 50
+    maxShoulderZRotation: 50
+  modules:
+  - {fileID: 11400000, guid: c7cdeadaad0d93643993b615805af6ed, type: 2}
+  - {fileID: 11400000, guid: 8d6a8bf343907f4438b22fb5b9b9075e, type: 2}

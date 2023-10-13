@@ -1,0 +1,182 @@
+{
+    "name": "Player Input",
+    "maps": [
+        {
+            "name": "Body",
+            "id": "caef8bf6-d8b6-4af5-9d89-f5d67a7be754",
+            "actions": [
+                {
+                    "name": "Eyes Position",
+                    "type": "Value",
+                    "id": "212c5a64-cf56-4e1f-b1a9-a1c52819475a",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Eyes Rotation",
+                    "type": "Value",
+                    "id": "ca7bb5dc-f43b-4d42-b21f-89c7167b5eb1",
+                    "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Left Hand Position",
+                    "type": "Value",
+                    "id": "1f705215-5974-4337-bee1-11d9a3de2b09",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Left Hand Rotation",
+                    "type": "Value",
+                    "id": "489c59fb-a6b1-4a06-8324-71e109e681e0",
+                    "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Right Hand Position",
+                    "type": "Value",
+                    "id": "9b62f7f4-d893-46c7-9958-d75ba15ac269",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Right Hand Rotation",
+                    "type": "Value",
+                    "id": "a7272271-0922-4604-b79c-0c6810417cc7",
+                    "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4902de0b-6a62-4682-83b2-1b876b220c93",
+                    "path": "<XRHMD>/centerEyeRotation",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Eyes Rotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c47905a8-fc72-4720-8297-28cc90cb21c4",
+                    "path": "<XRController>{LeftHand}/palmPose/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Left Hand Position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2f5b83c7-b3eb-41e0-98a8-e034aca36d24",
+                    "path": "<XRHMD>/centerEyePosition",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Eyes Position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "89cbdd5b-47a7-45e4-879c-b984a2048623",
+                    "path": "<XRController>{LeftHand}/palmPose/rotation",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Left Hand Rotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "97df11f6-1a13-4b5f-bdd1-54999ab333e6",
+                    "path": "<XRController>{RightHand}/palmPose/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Right Hand Position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fe479639-73f5-4573-92af-f27ed31f53aa",
+                    "path": "<XRController>{RightHand}/palmPose/rotation",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Right Hand Rotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Player",
+            "id": "d8c6c16d-5035-4351-a169-08569e411553",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "eec90111-ea50-4861-a804-7fceaa11b06b",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Rotate",
+                    "type": "Value",
+                    "id": "ecbb5be7-cc65-4be3-8b9d-637c35de4979",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a46a500b-ea5e-413f-9ea3-fc48d5dbeca2",
+                    "path": "<XRController>{LeftHand}/joystick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fdea47c2-4f31-4a92-b839-43df61e33953",
+                    "path": "<XRController>{RightHand}/joystick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

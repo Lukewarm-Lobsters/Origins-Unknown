@@ -1,0 +1,19 @@
+{
+  "name": "com.mischievous-byte.silhouette",
+  "displayName": "Silhouette",
+  "version": "1.0.0",
+  "author": {
+    "name": "Mischievous Byte"
+  },
+  "type": "library",
+  "dependencies": {
+    "com.unity.inputsystem": "1.0.0"
+  },
+  "samples": [
+    {
+        "displayName": "Quick Start",
+        "description": "-",
+        "path": "Samples~/Quick Start"
+    }
+  ]
+}
