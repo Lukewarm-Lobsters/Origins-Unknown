@@ -7,12 +7,16 @@ namespace LukewarmLobsters.OriginsUnknown
     public class IdleStateBehaviour : StateMachineBehaviour
     {
         float timer;
+        Transform playerTransform;
 
         [SerializeField] private float minIdleTime = 1;
         [SerializeField] private float maxIdleTime = 4;
+
+        [SerializeField] private float chaseDistance = 5;
         // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
         override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
+            playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
             timer = 0;
         }
 
@@ -24,6 +28,12 @@ namespace LukewarmLobsters.OriginsUnknown
             if (timer > Random.Range(minIdleTime, maxIdleTime))
             {
                 animator.SetBool("isPatrolling", true);
+            }
+
+            float distanceFromPlayer = Vector3.Distance(playerTransform.position, animator.transform.position);
+            if (distanceFromPlayer < chaseDistance)
+            {
+                animator.SetBool("isChasing", true);
             }
         }
 

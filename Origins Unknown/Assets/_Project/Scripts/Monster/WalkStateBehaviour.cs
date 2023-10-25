@@ -12,8 +12,12 @@ namespace LukewarmLobsters.OriginsUnknown
         List<Transform> waypoints = new List<Transform>();
         NavMeshAgent navMeshAgent;
 
+        Transform playerTransform;
+
         [SerializeField] private float minWalkTime = 6;
         [SerializeField] private float maxWalkTime = 12;
+
+        [SerializeField] private float chaseDistance = 5;
         // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
         override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
@@ -27,6 +31,8 @@ namespace LukewarmLobsters.OriginsUnknown
             }
 
             navMeshAgent.SetDestination(waypoints[Random.Range(0, waypoints.Count)].position);
+
+            playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         }
 
         // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -43,6 +49,12 @@ namespace LukewarmLobsters.OriginsUnknown
             if (timer > Random.Range(minWalkTime, maxWalkTime))
             {
                 animator.SetBool("isPatrolling", false);
+            }
+
+            float distanceFromPlayer = Vector3.Distance(playerTransform.position, animator.transform.position);
+            if (distanceFromPlayer < chaseDistance)
+            {
+                animator.SetBool("isChasing", true);
             }
 
         }
