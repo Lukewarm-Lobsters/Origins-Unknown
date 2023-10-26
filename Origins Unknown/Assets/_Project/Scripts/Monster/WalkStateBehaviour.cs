@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 namespace LukewarmLobsters.OriginsUnknown
 {
@@ -39,16 +41,14 @@ namespace LukewarmLobsters.OriginsUnknown
         override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
             timer += Time.deltaTime;
-
-            if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
-            {
-                Debug.Log("Waypoint reach");
-                navMeshAgent.SetDestination(waypoints[Random.Range(0, waypoints.Count)].position);
-            }
-
             if (timer > Random.Range(minWalkTime, maxWalkTime))
             {
                 animator.SetBool("isPatrolling", false);
+            }
+
+            if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
+            {
+                navMeshAgent.SetDestination(waypoints[Random.Range(0, waypoints.Count)].position);
             }
 
             float distanceFromPlayer = Vector3.Distance(playerTransform.position, animator.transform.position);

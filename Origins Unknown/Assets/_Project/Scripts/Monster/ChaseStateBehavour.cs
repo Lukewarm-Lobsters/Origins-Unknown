@@ -6,25 +6,34 @@ namespace LukewarmLobsters.OriginsUnknown
 {
     public class ChaseStateBehavour : StateMachineBehaviour
     {
+        float timer;
         UnityEngine.AI.NavMeshAgent navMeshAgent;
 
+        [SerializeField] private float minChaseTime = 15;
+        [SerializeField] private float maxChaseTime = 15;
 
         Transform playerTransform;
 
-        [SerializeField] private float ChaseDistance = 7;
-        [SerializeField] private float attackDistance = 2;
+        [SerializeField] private float ChaseDistance = 10;
+        [SerializeField] private float attackDistance = 3;
         // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
         override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
+            timer = 0;
+
             navMeshAgent = animator.GetComponent<UnityEngine.AI.NavMeshAgent>();
             playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-
-
         }
 
         // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
         override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
+            timer += Time.deltaTime;
+            if (timer > Random.Range(minChaseTime, maxChaseTime))
+            {
+                animator.SetBool("isChasing", false);
+            }
+
             navMeshAgent.SetDestination(playerTransform.position);
 
             float distanceFromPlayer = Vector3.Distance(playerTransform.position, animator.transform.position);
@@ -33,7 +42,7 @@ namespace LukewarmLobsters.OriginsUnknown
                 animator.SetBool("isChasing", false);
             }
 
-
+            Debug.Log("Chasing distance from player: " + distanceFromPlayer);
             if (distanceFromPlayer < attackDistance)
             {
                 animator.SetBool("isAttacking", true);

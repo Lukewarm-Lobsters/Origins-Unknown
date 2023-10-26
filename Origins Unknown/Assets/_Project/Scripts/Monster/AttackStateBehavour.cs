@@ -6,6 +6,7 @@ namespace LukewarmLobsters.OriginsUnknown
 {
     public class AttackStateBehavour : StateMachineBehaviour
     {
+
         UnityEngine.AI.NavMeshAgent navMeshAgent;
 
 
@@ -17,7 +18,7 @@ namespace LukewarmLobsters.OriginsUnknown
         override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
             navMeshAgent = animator.GetComponent<UnityEngine.AI.NavMeshAgent>();
-            playerTransform = GameObject.Find("Player Rig").transform;
+            playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
 
 
         }
@@ -25,6 +26,7 @@ namespace LukewarmLobsters.OriginsUnknown
         // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
         override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
+            Debug.Log("Attacking");
             animator.transform.LookAt(playerTransform);
 
             float distanceFromPlayer = Vector3.Distance(playerTransform.position, animator.transform.position);

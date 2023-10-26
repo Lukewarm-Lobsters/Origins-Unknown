@@ -7,7 +7,10 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: isAttacking
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4563564721701726204}
   m_Solo: 0
@@ -89,7 +92,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: IsChasing
+    m_ConditionEvent: isChasing
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7190562202422097322}
@@ -120,13 +123,13 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: IsChasing
+  - m_Name: isChasing
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: IsAttacking
+  - m_Name: isAttacking
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -154,7 +157,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: IsChasing
+    m_ConditionEvent: isChasing
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6167526663077088818}
@@ -179,7 +182,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: IsChasing
+    m_ConditionEvent: isChasing
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4563564721701726204}
@@ -204,7 +207,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: IsChasing
+    m_ConditionEvent: isChasing
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4563564721701726204}
@@ -259,7 +262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minWalkTime: 6
   maxWalkTime: 20
-  chaseDistance: 10
+  chaseDistance: 7
 --- !u!114 &2499772927127140115
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -272,7 +275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 511e9edbe4822394990e617ed41958a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChaseDistance: 15
+  ChaseDistance: 10
   attackDistance: 2
 --- !u!1107 &2772217874279754177
 AnimatorStateMachine:
@@ -291,7 +294,7 @@ AnimatorStateMachine:
     m_Position: {x: 480, y: -10, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4563564721701726204}
-    m_Position: {x: 760, y: 10, z: 0}
+    m_Position: {x: 690, y: 60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4885195503094597993}
     m_Position: {x: 780, y: -110, z: 0}
@@ -332,7 +335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minIdleTime: 3
   maxIdleTime: 5
-  chaseDistance: 4
+  chaseDistance: 7
 --- !u!1102 &6167526663077088818
 AnimatorState:
   serializedVersion: 6
@@ -369,7 +372,10 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: isAttacking
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4885195503094597993}
   m_Solo: 0
