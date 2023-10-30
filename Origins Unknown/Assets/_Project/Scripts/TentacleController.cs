@@ -20,6 +20,10 @@ namespace LukewarmLobsters.OriginsUnknown
 
         [SerializeField] private Transform target;
 
+
+        private Vector3 targetPosition;
+        private Quaternion targetRotation;
+
         void Awake()
         {
             splineContainer = GetComponent<SplineContainer>();
@@ -35,7 +39,8 @@ namespace LukewarmLobsters.OriginsUnknown
 
         private void HandleTarget()
         {
-
+            //target.position = targetPosition;
+            //target.rotation = targetRotation;
         }
 
         private void UpdateSpline()
@@ -81,8 +86,6 @@ namespace LukewarmLobsters.OriginsUnknown
             propertyBlock.SetFloat("_Circumference", splineExtrude.Radius * Mathf.PI * 2f);
 
             GetComponent<MeshRenderer>().SetPropertyBlock(propertyBlock);
-
-
         }
     }
 }
