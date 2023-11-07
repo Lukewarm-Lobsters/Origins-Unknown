@@ -1,0 +1,10 @@
+{
+    "name": "com.mischievous-byte.rig-builder",
+    "displayName": "Rig Builder",
+    "version": "1.0.0",
+    "description": "Tool for creating complex rigs",
+    "author": {
+      "name": "Mischievous Byte"
+    },
+    "type": "library"
+}
