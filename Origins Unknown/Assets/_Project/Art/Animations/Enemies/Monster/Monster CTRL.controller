@@ -136,6 +136,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+  - m_Name: canSeePlayer
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -261,8 +267,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 755824525ddf53c4594aa01f29dd8bb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minPatrolTime: 6
-  maxPatrolTime: 12
+  minPatrolTime: 13
+  maxPatrolTime: 17
+  minInSightTime: 1.5
 --- !u!114 &2499772927127140115
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -276,6 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDistance: 1.5
+  MaxOutOfSightTime: 7
 --- !u!1107 &2772217874279754177
 AnimatorStateMachine:
   serializedVersion: 6
@@ -332,8 +340,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc761c9723292d443bded553084ffb64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minIdleTime: 3
-  maxIdleTime: 5
+  minIdleTime: 7
+  maxIdleTime: 10
+  minInSightTime: 1.5
 --- !u!1102 &6167526663077088818
 AnimatorState:
   serializedVersion: 6

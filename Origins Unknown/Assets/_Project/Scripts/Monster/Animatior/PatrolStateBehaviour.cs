@@ -11,19 +11,24 @@ namespace LukewarmLobsters.OriginsUnknown
     public class PatrolStateBehaviour : StateMachineBehaviour
     {
         float timer;
+        float PlayerInSightTimer;
+
         List<Transform> waypoints = new List<Transform>();
         NavMeshAgent navMeshAgent;
 
         Transform playerTransform;
 
-        [SerializeField] private float minPatrolTime = 6;
-        [SerializeField] private float maxPatrolTime = 12;
+        [SerializeField] private float minPatrolTime;
+        [SerializeField] private float maxPatrolTime;
+
+        [SerializeField] private float minInSightTime;
 
         // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
         override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
             navMeshAgent = animator.GetComponent<NavMeshAgent>();
             timer = 0;
+            PlayerInSightTimer = 0;
 
             GameObject waypointsObj = GameObject.FindGameObjectWithTag("Waypoints");
             foreach (Transform transform in waypointsObj.transform)
@@ -48,6 +53,20 @@ namespace LukewarmLobsters.OriginsUnknown
             if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
             {
                 navMeshAgent.SetDestination(waypoints[Random.Range(0, waypoints.Count)].position);
+            }
+
+            if (animator.GetBool("canSeePlayer"))
+            {
+                PlayerInSightTimer += Time.deltaTime;
+
+                if (PlayerInSightTimer > minInSightTime)
+                {
+                    animator.SetBool("isChasing", true);
+                }
+            }
+            else
+            {
+                PlayerInSightTimer = 0;
             }
 
         }

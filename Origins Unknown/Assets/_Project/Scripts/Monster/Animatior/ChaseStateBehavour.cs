@@ -8,14 +8,21 @@ namespace LukewarmLobsters.OriginsUnknown
     {
         UnityEngine.AI.NavMeshAgent navMeshAgent;
 
+        float PlayerInSightTimer;
+
         Transform playerTransform;
 
-        [SerializeField] private float attackDistance = 3;
+        [SerializeField] private float attackDistance;
+
+        [SerializeField] private float MaxOutOfSightTime;
+
         // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
         override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
             navMeshAgent = animator.GetComponent<UnityEngine.AI.NavMeshAgent>();
             playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+
+            PlayerInSightTimer = 0;
         }
 
         // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -30,6 +37,20 @@ namespace LukewarmLobsters.OriginsUnknown
             {
                 animator.SetBool("isAttacking", true);
             }
+
+            if (!animator.GetBool("canSeePlayer"))
+            {
+                PlayerInSightTimer += Time.deltaTime;
+
+                if (PlayerInSightTimer > MaxOutOfSightTime)
+                {
+                    animator.SetBool("isChasing", false);
+                }
+            }
+            else
+            {
+                PlayerInSightTimer = 0;
+            }
         }
 
         // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
@@ -37,17 +58,5 @@ namespace LukewarmLobsters.OriginsUnknown
         {
             navMeshAgent.SetDestination(navMeshAgent.transform.position);
         }
-
-        // OnStateMove is called right after Animator.OnAnimatorMove()
-        //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-        //{
-        //    // Implement code that processes and affects root motion
-        //}
-
-        // OnStateIK is called right after Animator.OnAnimatorIK()
-        //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-        //{
-        //    // Implement code that sets up animation IK (inverse kinematics)
-        //}
     }
 }

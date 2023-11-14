@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 
 namespace LukewarmLobsters.OriginsUnknown
@@ -8,11 +9,11 @@ namespace LukewarmLobsters.OriginsUnknown
     public class FieldOfView : MonoBehaviour
     {
         public float radius;
-
         [Range(0, 360)]
         public float angle;
 
         public GameObject playerRef;
+        public Animator animatorRef;
 
         public LayerMask targetMask;
         public LayerMask obstructionMask;
@@ -59,6 +60,8 @@ namespace LukewarmLobsters.OriginsUnknown
             }
             else if (canSeePlayer)
                 canSeePlayer = false;
+
+            animatorRef.SetBool("canSeePlayer", canSeePlayer);
         }
     }
 }
