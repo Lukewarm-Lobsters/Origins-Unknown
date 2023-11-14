@@ -129,7 +129,7 @@ MonoBehaviour:
           z: 0
           w: 1
     - Position:
-        x: -0.77687174
+        x: -0.7768718
         y: 0.61399996
         z: -0.42558104
       TangentIn:
@@ -200,15 +200,15 @@ MonoBehaviour:
         T: 0.79310346
       - Distance: 1.4743246
         T: 0.82758623
-      - Distance: 1.5669928
+      - Distance: 1.5669929
         T: 0.86206895
-      - Distance: 1.663181
+      - Distance: 1.6631811
         T: 0.8965517
-      - Distance: 1.7627323
+      - Distance: 1.7627324
         T: 0.9310345
-      - Distance: 1.8655062
+      - Distance: 1.8655063
         T: 0.9655172
-      - Distance: 1.9713808
+      - Distance: 1.971381
         T: 1
     - Mode: 4
       Tension: 0.5
@@ -721,7 +721,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 814c5724deecfae4a872627b6e027c5a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.601
+      value: 0.28
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 814c5724deecfae4a872627b6e027c5a,
         type: 3}
@@ -731,7 +731,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 814c5724deecfae4a872627b6e027c5a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.227
+      value: 0.92
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 814c5724deecfae4a872627b6e027c5a,
         type: 3}
@@ -844,6 +844,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 814c5724deecfae4a872627b6e027c5a,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1730606110800758915}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 814c5724deecfae4a872627b6e027c5a,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 125018745791104705}
   m_SourcePrefab: {fileID: 100100000, guid: 814c5724deecfae4a872627b6e027c5a, type: 3}
 --- !u!4 &1173869494257016445 stripped
@@ -881,6 +885,29 @@ CapsuleCollider:
   m_Height: 1.1
   m_Direction: 1
   m_Center: {x: 0, y: 0.46, z: 0}
+--- !u!114 &1730606110800758915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946044018692129991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fb1d1d131c4ed648ba98a74669085d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 5.42
+  angle: 100
+  playerRef: {fileID: 0}
+  animatorRef: {fileID: 5091953528191484935}
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 64
+  obstructionMask:
+    serializedVersion: 2
+    m_Bits: 128
+  canSeePlayer: 0
 --- !u!195 &125018745791104705
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -903,3 +930,9 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 5
   m_ObstacleAvoidanceType: 4
+--- !u!95 &5091953528191484935 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 814c5724deecfae4a872627b6e027c5a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1711602503594162582}
+  m_PrefabAsset: {fileID: 0}
