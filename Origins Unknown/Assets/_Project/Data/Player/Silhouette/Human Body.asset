@@ -32,7 +32,7 @@ MonoBehaviour:
       type: 3}
     rotationAction: {fileID: -9058747811584019401, guid: 1b4707b2fba15524b96cd2c1cbb909cc,
       type: 3}
-  override: 1
+  override: 0
   rotation: 0
   eyesPose:
     position: {x: 0, y: 1.65, z: 0}

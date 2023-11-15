@@ -19,6 +19,8 @@ namespace LukewarmLobsters.OriginsUnknown
         public float movementSpeed;
         public float rotationSpeed;
 
+        public float linearGravity = -1;
+
         private void OnContextChanged(ModularRig.Context context)
         {
             characterController = Rig.GetComponent<CharacterController>();
@@ -33,8 +35,10 @@ namespace LukewarmLobsters.OriginsUnknown
             Vector2 moveInput = this.moveInput.action.ReadValue<Vector2>();
 
             Vector3 move = skeletonModule.Velocity + new Vector3(moveInput.x, 0, moveInput.y) * movementSpeed;
-            
-            characterController.Move(Rig.transform.rotation * move * Time.deltaTime);
+
+            move = Rig.transform.rotation * move + Physics.gravity.normalized * linearGravity;
+
+            characterController.Move(move * Time.deltaTime);
         }
 
         private void OnAvatarChanged(AvatarChangeContext context)
