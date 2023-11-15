@@ -4040,7 +4040,7 @@ GameObject:
   - component: {fileID: 3130161414511988408}
   m_Layer: 6
   m_Name: Player Rig
-  m_TagString: Player
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

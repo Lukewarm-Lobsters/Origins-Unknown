@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace LukewarmLobsters.OriginsUnknown
 {
@@ -19,8 +20,8 @@ namespace LukewarmLobsters.OriginsUnknown
         // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
         override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
-            navMeshAgent = animator.GetComponent<UnityEngine.AI.NavMeshAgent>();
-            playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+            navMeshAgent = animator.GetComponent<NavMeshAgent>();
+            playerTransform = GameObject.FindGameObjectWithTag("GameController").transform;
 
             PlayerInSightTimer = 0;
         }
@@ -32,7 +33,6 @@ namespace LukewarmLobsters.OriginsUnknown
             navMeshAgent.SetDestination(playerTransform.position);
 
             float distanceFromPlayer = Vector3.Distance(playerTransform.position, animator.transform.position);
-            Debug.Log("Chasing distance from player: " + distanceFromPlayer);
             if (distanceFromPlayer < attackDistance)
             {
                 animator.SetBool("isAttacking", true);
