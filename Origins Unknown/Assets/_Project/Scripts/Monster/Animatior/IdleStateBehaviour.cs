@@ -18,7 +18,7 @@ namespace LukewarmLobsters.OriginsUnknown
         // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
         override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
-            playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+            playerTransform = GameObject.FindGameObjectWithTag("GameController").transform;
             timer = 0;
             PlayerInSightTimer = 0;
         }

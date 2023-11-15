@@ -18,7 +18,7 @@ namespace LukewarmLobsters.OriginsUnknown
         override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
             navMeshAgent = animator.GetComponent<UnityEngine.AI.NavMeshAgent>();
-            playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+            playerTransform = GameObject.FindGameObjectWithTag("GameController").transform;
 
 
         }

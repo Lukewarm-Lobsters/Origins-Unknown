@@ -38,7 +38,7 @@ namespace LukewarmLobsters.OriginsUnknown
 
             navMeshAgent.SetDestination(waypoints[Random.Range(0, waypoints.Count)].position);
 
-            playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+            playerTransform = GameObject.FindGameObjectWithTag("GameController").transform;
         }
 
         // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
