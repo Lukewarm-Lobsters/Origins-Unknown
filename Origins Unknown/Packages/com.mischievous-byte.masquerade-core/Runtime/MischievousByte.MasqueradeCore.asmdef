@@ -1,0 +1,18 @@
+{
+    "name": "MischievousByte.MasqueradeCore",
+    "rootNamespace": "MischievousByte.Masquerade",
+    "references": [
+        "GUID:6a09c32d0a5ef1445bd3aa3356c7dc07",
+        "GUID:eda2e5b0f0bffaf4f8d4c89b8846645f",
+        "GUID:0e0385e5cc76b994ab9df332d61a6de2"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

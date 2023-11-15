@@ -1,0 +1,14 @@
+{
+    "name": "MischievousByte.MasqueradeSDK",
+    "rootNamespace": "MischievousByte.Masquerade",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

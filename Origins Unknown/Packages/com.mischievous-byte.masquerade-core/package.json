@@ -1,0 +1,14 @@
+{
+  "name": "com.mischievous-byte.masquerade-core",
+  "displayName": "Masquerade Core",
+  "version": "1.0.0",
+  "description": "-",
+  "author": {
+    "name": "Mischievous Byte"
+  },
+  "type": "library",
+  "dependencies": {
+    "com.mischievous-byte.masquerade-sdk": "1.0.0",
+    "com.mischievous-byte.rig-builder": "1.0.0"
+  }
+}
