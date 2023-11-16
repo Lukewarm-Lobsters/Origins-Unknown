@@ -1,5 +1,3 @@
-using CodiceApp.Gravatar;
-using JetBrains.Annotations;
 using MischievousByte.Masquerade.Character;
 using MischievousByte.RigBuilder;
 using MischievousByte.Silhouette;
